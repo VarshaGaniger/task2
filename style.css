@@ -1,74 +1,90 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2c3e50;
+    margin: 0;
+}
+
+.stopwatch {
+    background: #ecf0f1;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    background-color: #f4f4f9;
+    width: 300px;
 }
 
 h1 {
-    margin-top: 20px;
+    color: #2980b9;
+    margin-bottom: 20px;
 }
 
-.todo-container {
-    width: 50%;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #fff;
+#display {
+    font-size: 3em;
+    color: #27ae60;
+    margin-bottom: 20px;
 }
 
-input[type="text"], input[type="datetime-local"] {
-    width: calc(100% - 22px);
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
+.buttons button {
+    font-size: 1em;
+    margin: 5px;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #4CAF50;
-    color: #fff;
     cursor: pointer;
+    transition: background 0.3s, color 0.3s;
 }
 
-button:hover {
-    background-color: #45a049;
+#start {
+    background-color: #27ae60;
+    color: #ecf0f1;
 }
 
-ul {
-    list-style-type: none;
+#start:hover {
+    background-color: #2ecc71;
+}
+
+#stop {
+    background-color: #e74c3c;
+    color: #ecf0f1;
+}
+
+#stop:hover {
+    background-color: #c0392b;
+}
+
+#reset {
+    background-color: #f79b08;
+    color: #ecf0f1;
+}
+
+#reset:hover {
+    background-color: #e67e22;
+}
+
+#lap {
+    background-color: #2980b9;
+    color: #ecf0f1;
+}
+
+#lap:hover {
+    background-color: #3498db;
+}
+
+#laps {
+    list-style: none;
     padding: 0;
+    margin-top: 30px;
+    text-align: left;
 }
 
-li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-}
-
-li.completed {
-    text-decoration: line-through;
-    color: gray;
-}
-
-li button {
-    margin-left: 5px;
-    background-color: #f44336;
-}
-
-li button.edit {
-    background-color: #ffa500;
-}
-
-li button:hover {
-    background-color: #d32f2f;
-}
-
-li button.edit:hover {
-    background-color: #ff8c00;
+#laps li {
+    font-size: 1em;
+    background: #bdc3c7;
+    margin: 5px 0;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
